@@ -4,22 +4,22 @@ const featuresData = [
     {
         icon: 'images/features-icon-1.png',
         title: 'ВКУСНАЯ ЕДА',
-        text: 'Блюда европейской кухни.',
+        text: 'Блюда европейской кухни',
     },
     {
         icon: 'images/features-icon-2.png',
         title: 'ОБЩАЯ ПЛОЩАДЬ',
-        text: '270 кв. м.',
+        text: '270 кв. м',
     },
     {
         icon: 'images/features-icon-3.png',
         title: 'БАНКЕТНЫХ МЕСТ',
-        text: 'до 70 персон.',
+        text: 'до 70 персон',
     },
     {
         icon: 'images/features-icon-4.png',
-        title: 'Мероприятия',
-        text: 'Помощь в организации любого вида мероприятий.',
+        title: 'Услуги',
+        text: 'Помощь в организации любого вида мероприятий',
     },
 ];
 

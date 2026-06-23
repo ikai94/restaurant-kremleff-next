@@ -13,7 +13,7 @@ const NavItem: React.FC<NavItemProps> = ({ href, label, active, onClick }) => (
             href={href}
             className={`navbar-link hover-underline ${active ? 'active' : ''}`}
             onClick={onClick}
-        >
+        > 
             <div className="separator"></div>
             <span className="span">{label}</span>
         </a>
