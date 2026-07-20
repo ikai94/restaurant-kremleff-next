@@ -1,4 +1,5 @@
 import './Services.css';
+import { withBasePath } from '@/shared/lib/with-base-path';
 
 const highlights = [
     'Двухуровневое пространство с дизайнерским интерьером',
@@ -28,21 +29,21 @@ const showcaseCards = [
         id: 1,
         title: 'Уютные и колоритные пространства',
         subtitle: 'Залы на 20 или 50 гостей',
-        imgSrc: '/images/1.jpg',
+        imgSrc: withBasePath('/images/1.jpg'),
         imgAlt: 'Интерьер банкетного зала',
     },
     {
         id: 2,
         title: 'События без границ',
         subtitle: 'Свадьбы, корпораты, деловые вечера',
-        imgSrc: '/images/2.jpg',
+        imgSrc: withBasePath('/images/2.jpg'),
         imgAlt: 'Декорированный стол',
     },
     {
         id: 3,
         title: 'Атмосфера праздника',
         subtitle: 'Стильный интерьер и профессиональное свето-звуковое оборудование',
-        imgSrc: '/images/3.jpg',
+        imgSrc: withBasePath('/images/3.jpg'),
         imgAlt: 'Праздничная атмосфера в зале',
     },
 ];
@@ -137,7 +138,7 @@ const Services: React.FC = () => {
                 </div>
             </div>
             <img
-                src="/images/shape-1.png"
+                src={withBasePath('/images/shape-1.png')}
                 width="246"
                 height="412"
                 loading="lazy"
@@ -145,7 +146,7 @@ const Services: React.FC = () => {
                 className="shape shape-1 move-anim"
             />
             <img
-                src="/images/shape-2.png"
+                src={withBasePath('/images/shape-2.png')}
                 width="343"
                 height="345"
                 loading="lazy"

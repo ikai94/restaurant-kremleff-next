@@ -1,6 +1,7 @@
 'use client';
 
 import { useCallback, useEffect, useState, useRef } from 'react';
+import { withBasePath } from '@/shared/lib/with-base-path';
 
 interface Slide {
     id: number;
@@ -15,7 +16,7 @@ interface Slide {
 const slides: Slide[] = [
     {
         id: 1,
-        bg: '/images/hero-slider-1.jpg',
+        bg: withBasePath('/images/hero-slider-1.jpg'),
         subtitle: 'Добро пожаловать',
         title: 'БанкетХолл Kremleff',
         text: 'Специализация на русской кухне в авторском исполнении',
@@ -24,7 +25,7 @@ const slides: Slide[] = [
     },
     {
         id: 2,
-        bg: '/images/hero-slider-2.jpg',
+        bg: withBasePath('/images/hero-slider-2.jpg'),
         subtitle: 'Лучшие блюда',
         title: 'Авторская кухня',
         text: 'Попробуйте наши фирменные блюда от шеф-повара',
@@ -33,7 +34,7 @@ const slides: Slide[] = [
     },
     {
         id: 3,
-        bg: '/images/hero-slider-3.jpg',
+        bg: withBasePath('/images/hero-slider-3.jpg'),
         subtitle: 'Незабываемые вечера',
         title: 'Уютная атмосфера',
         text: 'Проведите вечер в комфортной обстановке',
@@ -155,7 +156,7 @@ const HeroSlider: React.FC = () => {
                 className="hero-btn has-after"
             >
                 <img
-                    src="/images/krem-logo.png"
+                    src={withBasePath('/images/krem-logo.png')}
                     width="80"
                     height="80"
                     alt="booking icon"

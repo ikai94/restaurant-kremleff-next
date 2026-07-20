@@ -1,23 +1,24 @@
 import React from 'react';
+import { withBasePath } from '@/shared/lib/with-base-path';
 
 const featuresData = [
     {
-        icon: '/images/features-icon-1.png',
+        icon: withBasePath('/images/features-icon-1.png'),
         title: 'ВКУСНАЯ ЕДА',
         text: 'Блюда европейской кухни',
     },
     {
-        icon: '/images/features-icon-2.png',
+        icon: withBasePath('/images/features-icon-2.png'),
         title: 'ОБЩАЯ ПЛОЩАДЬ',
         text: '270 кв. м',
     },
     {
-        icon: '/images/features-icon-3.png',
+        icon: withBasePath('/images/features-icon-3.png'),
         title: 'БАНКЕТНЫХ МЕСТ',
         text: 'до 70 персон',
     },
     {
-        icon: '/images/features-icon-4.png',
+        icon: withBasePath('/images/features-icon-4.png'),
         title: 'Услуги',
         text: 'Помощь в организации любого вида мероприятий',
     },
@@ -56,7 +57,7 @@ const Features: React.FC = () => {
                 </ul>
 
                 <img
-                    src="/images/shape-7.png"
+                    src={withBasePath('/images/shape-7.png')}
                     width="208"
                     height="178"
                     loading="lazy"
@@ -65,7 +66,7 @@ const Features: React.FC = () => {
                 />
 
                 <img
-                    src="/images/shape-8.png"
+                    src={withBasePath('/images/shape-8.png')}
                     width="120"
                     height="115"
                     loading="lazy"

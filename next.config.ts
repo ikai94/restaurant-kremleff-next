@@ -12,6 +12,10 @@ const nextConfig: NextConfig = {
     basePath: isGitHubActions ? `/${repoName}` : '',
     assetPrefix: isGitHubActions ? `/${repoName}/` : '',
 
+    env: {
+        NEXT_PUBLIC_BASE_PATH: isGitHubActions ? `/${repoName}` : '',
+    },
+
     images: {
         unoptimized: true,
     },

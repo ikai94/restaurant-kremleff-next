@@ -1,5 +1,6 @@
 import type { CSSProperties } from 'react';
 import type { MenuItem } from '@/entities/menu/model/types';
+import { withBasePath } from '@/shared/lib/with-base-path';
 
 interface MenuProps {
     items: MenuItem[];
@@ -85,7 +86,7 @@ const Menu = ({ items }: MenuProps) => {
                 </a>
 
                 <img
-                    src="/images/shape-5.png"
+                    src={withBasePath('/images/shape-5.png')}
                     width={921}
                     height={1036}
                     loading="lazy"
@@ -93,7 +94,7 @@ const Menu = ({ items }: MenuProps) => {
                     className="shape shape-2 move-anim"
                 />
                 <img
-                    src="/images/shape-6.png"
+                    src={withBasePath('/images/shape-6.png')}
                     width={343}
                     height={345}
                     loading="lazy"

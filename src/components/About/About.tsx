@@ -1,3 +1,5 @@
+import { withBasePath } from '@/shared/lib/with-base-path';
+
 const About = () => {
     return (
         <section
@@ -44,7 +46,7 @@ const About = () => {
 
                 <figure className="about-banner">
                     <img
-                        src="/images/about-banner.jpg"
+                        src={withBasePath('/images/about-banner.jpg')}
                         width="570"
                         height="570"
                         loading="lazy"
@@ -60,7 +62,7 @@ const About = () => {
                         data-parallax-speed="1.75"
                     >
                         <img
-                            src="/images/about-abs-image.jpg"
+                            src={withBasePath('/images/about-abs-image.jpg')}
                             width="285"
                             height="285"
                             loading="lazy"
@@ -71,7 +73,7 @@ const About = () => {
 
                     <div className="abs-img abs-img-2 has-before">
                         <img
-                            src="/images/krem-logo.png"
+                            src={withBasePath('/images/krem-logo.png')}
                             width="134"
                             height="134"
                             loading="lazy"
@@ -81,7 +83,7 @@ const About = () => {
                 </figure>
 
                 <img
-                    src="/images/shape-3.png"
+                    src={withBasePath('/images/shape-3.png')}
                     width="197"
                     height="194"
                     loading="lazy"

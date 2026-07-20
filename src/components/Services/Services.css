@@ -19,7 +19,7 @@
     position: absolute;
     top: 100%;
     left: 44.6%;
-    content: url('/images/separator.svg');
+    content: var(--separator-image);
     display: block;
     width: 100px;
     margin-inline: auto;

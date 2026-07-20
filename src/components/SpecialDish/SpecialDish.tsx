@@ -1,3 +1,5 @@
+import { withBasePath } from '@/shared/lib/with-base-path';
+
 const SpecialDish = () => {
     return (
         <section
@@ -6,7 +8,7 @@ const SpecialDish = () => {
         >
             <div className="special-dish-banner">
                 <img
-                    src="/images/special-dish-banner.jpg"
+                    src={withBasePath('/images/special-dish-banner.jpg')}
                     width="940"
                     height="900"
                     loading="lazy"
@@ -18,7 +20,7 @@ const SpecialDish = () => {
             <div className="special-dish-content bg-black-10">
                 <div className="container">
                     <img
-                        src="/images/badge-1.png"
+                        src={withBasePath('/images/badge-1.png')}
                         width="28"
                         height="41"
                         loading="lazy"
@@ -59,7 +61,7 @@ const SpecialDish = () => {
             </div>
 
             <img
-                src="/images/shape-4.png"
+                src={withBasePath('/images/shape-4.png')}
                 width="179"
                 height="359"
                 loading="lazy"
@@ -68,7 +70,7 @@ const SpecialDish = () => {
             />
 
             <img
-                src="/images/shape-9.png"
+                src={withBasePath('/images/shape-9.png')}
                 width="351"
                 height="462"
                 loading="lazy"

@@ -338,7 +338,7 @@ body.nav-active {
 }
 
 .section-subtitle::after {
-    content: url('/images/separator.svg');
+    content: var(--separator-image);
     display: block;
     width: 100px;
     margin-inline: auto;
@@ -1173,7 +1173,7 @@ body.nav-active {
     transform: translateX(-50%);
     width: 140px;
     height: 100%;
-    background-image: url('/images/img-pattern.svg');
+    background-image: var(--pattern-image);
     background-position: center;
     background-size: cover;
     background-repeat: repeat;
@@ -1265,14 +1265,14 @@ body.nav-active {
     left: 50%;
     transform: translateX(-50%);
     width: 52%;
-    background-image: url('/images/img-pattern.svg');
+    background-image: var(--pattern-image);
     background-repeat: repeat;
     background-position: center;
 }
 
 .about .abs-img-2::before {
     inset: 0;
-    background-image: url('/images/krem-logo.png');
+    background-image: var(--logo-image);
     background-repeat: no-repeat;
     background-size: contain;
     animation: rotate360 15s linear infinite;
@@ -1617,7 +1617,7 @@ body.nav-active {
 .footer-brand {
     position: relative;
     padding: 50px 40px;
-    background: var(--smoky-black-1) url('/images/footer-form-bg.png');
+    background: var(--smoky-black-1) var(--footer-form-bg);
     background-position: center top;
     background-repeat: repeat;
 }
@@ -1627,7 +1627,7 @@ body.nav-active {
     top: 0;
     width: 15px;
     height: 100%;
-    background-image: url('/images/footer-form-pattern.svg');
+    background-image: var(--footer-form-pattern);
 }
 
 .footer-brand::before {
