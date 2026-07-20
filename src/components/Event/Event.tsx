@@ -1,3 +1,5 @@
+import type { CSSProperties } from 'react';
+
 interface EventItem {
     image: string;
     date: string;
@@ -8,21 +10,21 @@ interface EventItem {
 
 const eventsData: EventItem[] = [
     {
-        image: 'images/event-1.jpg',
+        image: '/images/event-1.jpg',
         date: '23/02/2026',
         datetime: '2026-02-23',
         subtitle: 'Здоровая пища',
         title: 'Используем полезные и локальные ингредиенты',
     },
     {
-        image: 'images/event-2.jpg',
+        image: '/images/event-2.jpg',
         date: '08/03/2026',
         datetime: '2026-03-08',
         subtitle: 'Еда, Вкус',
         title: 'Работаем только с профессионалами',
     },
     {
-        image: 'images/event-3.jpg',
+        image: '/images/event-3.jpg',
         date: '01/05/2026',
         datetime: '2026-05-01',
         subtitle: 'Любимый рецепт',
@@ -56,7 +58,7 @@ const Event = () => {
                                         {
                                             '--width': 350,
                                             '--height': 450,
-                                        } as React.CSSProperties
+                                        } as CSSProperties
                                     }
                                 >
                                     <img

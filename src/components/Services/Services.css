@@ -19,7 +19,7 @@
     position: absolute;
     top: 100%;
     left: 44.6%;
-    content: url('images/separator.svg');
+    content: url('/images/separator.svg');
     display: block;
     width: 100px;
     margin-inline: auto;
@@ -108,6 +108,7 @@
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
 }
 
 .banquet-card h3 {

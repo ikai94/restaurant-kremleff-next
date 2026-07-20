@@ -2,22 +2,22 @@ import React from 'react';
 
 const featuresData = [
     {
-        icon: 'images/features-icon-1.png',
+        icon: '/images/features-icon-1.png',
         title: 'ВКУСНАЯ ЕДА',
         text: 'Блюда европейской кухни',
     },
     {
-        icon: 'images/features-icon-2.png',
+        icon: '/images/features-icon-2.png',
         title: 'ОБЩАЯ ПЛОЩАДЬ',
         text: '270 кв. м',
     },
     {
-        icon: 'images/features-icon-3.png',
+        icon: '/images/features-icon-3.png',
         title: 'БАНКЕТНЫХ МЕСТ',
         text: 'до 70 персон',
     },
     {
-        icon: 'images/features-icon-4.png',
+        icon: '/images/features-icon-4.png',
         title: 'Услуги',
         text: 'Помощь в организации любого вида мероприятий',
     },
@@ -56,7 +56,7 @@ const Features: React.FC = () => {
                 </ul>
 
                 <img
-                    src="images/shape-7.png"
+                    src="/images/shape-7.png"
                     width="208"
                     height="178"
                     loading="lazy"
@@ -65,7 +65,7 @@ const Features: React.FC = () => {
                 />
 
                 <img
-                    src="images/shape-8.png"
+                    src="/images/shape-8.png"
                     width="120"
                     height="115"
                     loading="lazy"

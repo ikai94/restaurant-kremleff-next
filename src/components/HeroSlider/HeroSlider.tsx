@@ -1,6 +1,6 @@
-import React, { useEffect, useState, useRef } from 'react';
-import { IonIcon } from '@ionic/react';
-import { chevronBackOutline, chevronForwardOutline } from 'ionicons/icons';
+'use client';
+
+import { useCallback, useEffect, useState, useRef } from 'react';
 
 interface Slide {
     id: number;
@@ -15,7 +15,7 @@ interface Slide {
 const slides: Slide[] = [
     {
         id: 1,
-        bg: 'images/hero-slider-1.jpg',
+        bg: '/images/hero-slider-1.jpg',
         subtitle: 'Добро пожаловать',
         title: 'БанкетХолл Kremleff',
         text: 'Специализация на русской кухне в авторском исполнении',
@@ -24,7 +24,7 @@ const slides: Slide[] = [
     },
     {
         id: 2,
-        bg: 'images/hero-slider-2.jpg',
+        bg: '/images/hero-slider-2.jpg',
         subtitle: 'Лучшие блюда',
         title: 'Авторская кухня',
         text: 'Попробуйте наши фирменные блюда от шеф-повара',
@@ -33,7 +33,7 @@ const slides: Slide[] = [
     },
     {
         id: 3,
-        bg: 'images/hero-slider-3.jpg',
+        bg: '/images/hero-slider-3.jpg',
         subtitle: 'Незабываемые вечера',
         title: 'Уютная атмосфера',
         text: 'Проведите вечер в комфортной обстановке',
@@ -46,32 +46,32 @@ const AUTO_SLIDE_INTERVAL = 7000;
 
 const HeroSlider: React.FC = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
-    const intervalRef = useRef<any | null>(null);
+    const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
-    const slideNext = () => {
+    const slideNext = useCallback(() => {
         setCurrentIndex((prev) => (prev + 1) % slides.length);
-    };
+    }, []);
 
     const slidePrev = () => {
         setCurrentIndex((prev) => (prev - 1 + slides.length) % slides.length);
     };
 
-    useEffect(() => {
-        startAutoSlide();
-        return stopAutoSlide;
-    }, []);
-
-    const startAutoSlide = () => {
-        stopAutoSlide();
+    const startAutoSlide = useCallback(() => {
+        if (intervalRef.current) clearInterval(intervalRef.current);
         intervalRef.current = setInterval(slideNext, AUTO_SLIDE_INTERVAL);
-    };
+    }, [slideNext]);
 
     const stopAutoSlide = () => {
         if (intervalRef.current) clearInterval(intervalRef.current);
     };
 
+    useEffect(() => {
+        startAutoSlide();
+        return stopAutoSlide;
+    }, [startAutoSlide]);
+
     return (
-        <section className="hero" data-hero-slider id="Home">
+        <section className="hero" data-hero-slider id="home">
             {slides.map((slide, index) => (
                 <div
                     key={slide.id}
@@ -81,7 +81,12 @@ const HeroSlider: React.FC = () => {
                     data-hero-slider-item
                 >
                     <div className="slider-bg">
-                        <img src={slide.bg} alt={slide.title} loading="lazy" />
+                        <img
+                            src={slide.bg}
+                            alt={slide.title}
+                            loading={index === 0 ? 'eager' : 'lazy'}
+                            fetchPriority={index === 0 ? 'high' : 'auto'}
+                        />
                     </div>
 
                     <p className="label-2 section-subtitle slider-reveal text-center">
@@ -108,32 +113,49 @@ const HeroSlider: React.FC = () => {
             ))}
 
             <button
+                type="button"
                 className="slider-btn prev"
+                aria-label="Предыдущий слайд"
                 data-prev-btn
                 onClick={slidePrev}
                 onMouseOver={stopAutoSlide}
                 onMouseOut={startAutoSlide}
             >
-                <IonIcon icon={chevronBackOutline} />
+                <svg
+                    className="slider-arrow"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                >
+                    <path d="m15 5-7 7 7 7" />
+                </svg>
             </button>
 
             <button
+                type="button"
                 className="slider-btn next"
+                aria-label="Следующий слайд"
                 data-next-btn
                 onClick={slideNext}
                 onMouseOver={stopAutoSlide}
                 onMouseOut={startAutoSlide}
             >
-                <IonIcon icon={chevronForwardOutline} />
+                <svg
+                    className="slider-arrow"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                >
+                    <path d="m9 5 7 7-7 7" />
+                </svg>
             </button>
 
             <a
                 href="https://rest-kremleff.ru/menu/Banketnoe_menu.pdf"
                 target="_blank"
+                rel="noopener noreferrer"
                 className="hero-btn has-after"
             >
                 <img
-                    src="images/krem-logo.png"
+                    src="/images/krem-logo.png"
                     width="80"
                     height="80"
                     alt="booking icon"

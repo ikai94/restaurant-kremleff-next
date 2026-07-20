@@ -6,7 +6,7 @@ const SpecialDish = () => {
         >
             <div className="special-dish-banner">
                 <img
-                    src="images/special-dish-banner.jpg"
+                    src="/images/special-dish-banner.jpg"
                     width="940"
                     height="900"
                     loading="lazy"
@@ -18,7 +18,7 @@ const SpecialDish = () => {
             <div className="special-dish-content bg-black-10">
                 <div className="container">
                     <img
-                        src="images/badge-1.png"
+                        src="/images/badge-1.png"
                         width="28"
                         height="41"
                         loading="lazy"
@@ -48,6 +48,7 @@ const SpecialDish = () => {
                         data-menu-toggler
                         href="https://disk.yandex.ru/i/hZj8WZNp-8ylsA"
                         target="_blank"
+                        rel="noopener noreferrer"
                     >
                         <span className="text text-1">Посмотреть меню</span>
                         <span className="text text-2" aria-hidden="true">
@@ -58,7 +59,7 @@ const SpecialDish = () => {
             </div>
 
             <img
-                src="images/shape-4.png"
+                src="/images/shape-4.png"
                 width="179"
                 height="359"
                 loading="lazy"
@@ -67,7 +68,7 @@ const SpecialDish = () => {
             />
 
             <img
-                src="images/shape-9.png"
+                src="/images/shape-9.png"
                 width="351"
                 height="462"
                 loading="lazy"

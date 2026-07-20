@@ -25,7 +25,7 @@ const About = () => {
                         Современное световое и звуковое оборудование позволяет
                         создать неповторимую атмосферу, будь то динамичный
                         танцпол или уютный уголок для общения, а наша команда
-                        профессионалов с радрстью поможет реализовать любые ваши
+                        профессионалов с радостью поможет реализовать любые ваши
                         идеи и пожелания. Сделаем ваш праздник незабываемым
                         вместе!
                     </p>
@@ -44,7 +44,7 @@ const About = () => {
 
                 <figure className="about-banner">
                     <img
-                        src="images/about-banner.jpg"
+                        src="/images/about-banner.jpg"
                         width="570"
                         height="570"
                         loading="lazy"
@@ -60,7 +60,7 @@ const About = () => {
                         data-parallax-speed="1.75"
                     >
                         <img
-                            src="images/about-abs-image.jpg"
+                            src="/images/about-abs-image.jpg"
                             width="285"
                             height="285"
                             loading="lazy"
@@ -71,7 +71,7 @@ const About = () => {
 
                     <div className="abs-img abs-img-2 has-before">
                         <img
-                            src="images/krem-logo.png"
+                            src="/images/krem-logo.png"
                             width="134"
                             height="134"
                             loading="lazy"
@@ -81,7 +81,7 @@ const About = () => {
                 </figure>
 
                 <img
-                    src="images/shape-3.png"
+                    src="/images/shape-3.png"
                     width="197"
                     height="194"
                     loading="lazy"

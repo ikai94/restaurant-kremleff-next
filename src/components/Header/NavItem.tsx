@@ -13,8 +13,9 @@ const NavItem: React.FC<NavItemProps> = ({ href, label, active, onClick }) => (
             href={href}
             className={`navbar-link hover-underline ${active ? 'active' : ''}`}
             onClick={onClick}
-        > 
-            <div className="separator"></div>
+            aria-current={active ? 'location' : undefined}
+        >
+            <div className="separator" aria-hidden="true"></div>
             <span className="span">{label}</span>
         </a>
     </li>

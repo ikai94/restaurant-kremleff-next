@@ -1,8 +1,6 @@
 import React from 'react';
 import NavItem from './NavItem';
 import Logo from './Logo';
-import { IonIcon } from '@ionic/react';
-import { chevronUpOutline } from 'ionicons/icons';
 
 interface NavbarProps {
     isOpen: boolean;
@@ -34,14 +32,26 @@ const Navbar: React.FC<NavbarProps> = ({
     ];
 
     return (
-        <nav className={`navbar ${isOpen ? 'active' : ''}`} data-navbar>
+        <nav
+            id="site-navigation"
+            className={`navbar ${isOpen ? 'active' : ''}`}
+            aria-label="Основная навигация"
+            data-navbar
+        >
             <button
+                type="button"
                 className="close-btn"
-                aria-label="close menu"
+                aria-label="Закрыть меню"
                 onClick={toggleNav}
                 data-nav-toggler
             >
-                <IonIcon icon={chevronUpOutline} />
+                <svg
+                    className="close-icon"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                >
+                    <path d="M6 6l12 12M18 6 6 18" />
+                </svg>
             </button>
 
             <Logo />

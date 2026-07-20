@@ -1,6 +1,6 @@
+'use client';
+
 import { useEffect, useState } from 'react';
-import { IonIcon } from '@ionic/react';
-import { chevronUpOutline } from 'ionicons/icons';
 
 const BackToTopButton: React.FC = () => {
     const [isActive, setIsActive] = useState<boolean>(false);
@@ -16,12 +16,13 @@ const BackToTopButton: React.FC = () => {
 
     return (
         <button
+            type="button"
             className={`back-top-btn ${isActive ? 'active' : ''}`}
             onClick={scrollToTop}
             data-back-top-btn
-            aria-label="Back to top"
+            aria-label="Наверх"
         >
-            <IonIcon icon={chevronUpOutline} />
+            <span aria-hidden="true">↑</span>
         </button>
     );
 };
