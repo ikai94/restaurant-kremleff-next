@@ -40,6 +40,10 @@ const Menu = ({ items }: MenuProps) => {
                                         style={{
                                             height: '100px',
                                             width: '100px',
+                                            objectPosition:
+                                                item.id === 'tongue-salad'
+                                                    ? 'center 20%'
+                                                    : undefined,
                                         }}
                                     />
                                 </figure>

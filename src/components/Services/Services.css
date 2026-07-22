@@ -57,11 +57,7 @@
 }
 
 .banquet-showcase__card::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(145deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1));
-    pointer-events: none;
+    content: none;
 }
 
 .banquet-showcase__card:hover {

@@ -70,7 +70,7 @@ const Footer = () => {
 
                         <p className="title-1">
                             Kremleff БанкетХолл <br />
-                            Ресторан европейской кухни
+                            Ресторан русской кухни
                         </p>
                     </div>
 
